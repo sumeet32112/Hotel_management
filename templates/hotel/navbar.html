@@ -1,0 +1,17 @@
+{% load static %}
+<nav style="background-color: yellowgreen;margin:20px;height:50px;">
+    <ul class="nav justify-content-center">
+        <li class="nav-item">
+            <a class="nav-link " href="{% url 'user_profile' %}"><img style="display: inline-block;width: 25px;" src="{% static 'images/user_icon.png' %}">user_profile</a>
+          </li>
+        <li class="nav-item">
+          <a class="nav-link " href="{% url 'logout' %}">Logout</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="#">About Us</a>
+        </li>
+      </ul>
+    </nav>

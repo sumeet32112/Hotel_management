@@ -1,0 +1,12 @@
+{% extends 'hotel/main.html' %}
+{% load static %}
+{% block content %}
+ 
+    <h1 style="text-align: center;"><strong>{{hotel.hotelName}}</strong></h1><hr>  
+<div class="col-lg-4">
+    <a href="#"><img class="thumbnail" src="{{hotel.imageURL}}"></a>
+</div>
+<p><h3>total room:-{{hotel.totalRoom}}</h3></p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, officia facere nemo corrupti sapiente dignissimos eius nesciunt architecto expedita voluptatum eligendi sint reprehenderit quisquam dolorem quam atque perferendis, libero sequi.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit, cupiditate consequatur temporibus eveniet, dolores sequi maxime alias delectus reprehenderit nam adipisci sint soluta velit illum aliquam tenetur blanditiis voluptas iusto!</p>
+{% endblock %}

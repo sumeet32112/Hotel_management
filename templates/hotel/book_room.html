@@ -1,0 +1,14 @@
+{% extends 'hotel/main.html' %}
+{% load static %}
+{% block content %}
+{% include 'hotel/navbar.html' %}
+<div style="text-align: center; text-decoration: underline;">
+    <img src="{{hotel.imageURL}}">
+    <h1>{{hotel.hotelName}}</h1>
+</div>
+<div>
+    {% for room in values %}
+    <p style="display: inline-block; "><h3>ROOM NO. :{{room.room_no}}</h3><b><a href="{% url 'reservation_room' room_id=room.id checkin=checkin checkout=checkout %}">Book Now</a></b></p>
+    {% endfor %}
+</div>
+{% endblock %}

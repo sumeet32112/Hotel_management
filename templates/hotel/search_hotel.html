@@ -1,0 +1,19 @@
+{% extends 'hotel/main.html' %}
+{% load static %}
+{% block content %}
+{% include 'hotel/navbar.html' %}
+<span>Results for your search:</span>
+<div class="row">
+    {% for hotel,cnt in values.items %}
+    <div class="col-lg-4">
+        <a href="#"><img class="thumbnail" src="{{hotel.imageURL}}"></a>
+        <div class="box-element product">
+            <h2><a href="#"><strong>{{hotel.hotelName}}</strong></a></h2><p><strong>available room:-{{cnt}}</strong></p>
+            <hr>
+            <button><a href="{% url 'book_room' hotel_id=hotel.id checkin=checkin checkout=checkout %}">Book Now</a></button>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}
